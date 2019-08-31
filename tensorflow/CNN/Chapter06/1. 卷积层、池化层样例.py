@@ -18,7 +18,6 @@ import tensorflow as tf
 import numpy as np
 
 M = np.array([
-    [1, 1],
     [[1], [-1], [0]],
     [[-1], [2], [1]],
     [[0], [2], [-2]]
