@@ -1,6 +1,5 @@
 import numpy as np
 import cv2
-from ministTrain import mnist_eval
 isPress = False
 
 
@@ -12,9 +11,11 @@ def detect(img):
 
     imgdata = np.reshape(imgdata,(1, 784))
 
-    lay1 = np.matmul(imgdata, weight1)
+    # lay1 = np.matmul(imgdata, weight1)
+    lay1 = imgdata.dot(weight1)
     laySig = lay1 / (1 + np.exp(-lay1))
-    lay2 = np.matmul(laySig, weight2)
+    # lay2 = np.matmul(laySig, weight2)
+    lay2 = laySig.dot(weight2)
 
 
     return np.argmax(lay2)
