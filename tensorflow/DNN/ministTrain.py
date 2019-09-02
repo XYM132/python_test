@@ -128,7 +128,7 @@ def mnist_eval(data):
         return result[0]
 
 def main():
-    mnist = input_data.read_data_sets("./", one_hot=True)
+    mnist = input_data.read_data_sets("dataset", one_hot=True)
     #train(mnist,False)
     mnist_eval(mnist.test.images[1])
 
